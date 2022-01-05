@@ -8,7 +8,7 @@ const client = new Discord.Client({
     ]
 })
 client.on("messageCreate", (message) => {
-    if (message.reactions.message.tts == true && message.content === "hi"){
+    if (message.content === "hi"){
         message.reply('Suuuuuup')
         console.log('sent and message was tts')
     }
