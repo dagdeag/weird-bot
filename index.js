@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-require('dotenv').config()
+require('dotenv').config();
 
 const client = new Discord.Client({
     intents: [
@@ -7,7 +7,7 @@ const client = new Discord.Client({
         "GUILD_MESSAGES",
         "GUILD_MEMBERS"
     ]
-})
+});
 
 client.on("ready", () => console.log(`Logged in as ${client.user.tag}`));
 
@@ -19,7 +19,7 @@ client.on("messageCreate", (message) => {
 const welcomeChannelId = '928110428733726791';
 
 client.on("guildMemberAdd", (member) => {
-    member.guild.channels.cache.get(welcomeChannelId).send(`<@${member.id}> Welcome to the server!`)
+    member.guild.channels.cache.get(welcomeChannelId).send(`<@${member.id}> Welcome to the server!`);
 })
 
-client.login(process.env.TOKEN)
+client.login(process.env.TOKEN);
